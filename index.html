@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Up ENSA Fes - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+.hero-section::after { display: none !important; }
+</style>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="activities.html">Activités</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="team.html">Notre Équipe</a></li>
+                    <li><a href="join.html">Rejoignez-nous</a></li>
+                    <li><a href="news.html">Actualités / Blog</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area for the Homepage -->
+    <main id="main-content">
+
+        <!-- Hero Section: The main banner/introduction -->
+        <section class="hero-section">
+            <img id="animated-logo" src="images/powerup_logo.png" alt="Power Up Logo" style="position:absolute; left:0; top:50%; width:700px; height:700px; opacity:0.13; z-index:1; pointer-events:none; filter:blur(2px) drop-shadow(0 0 40px #1ED760); transform:translateY(-50%) rotate(-18deg) scale(1.08);">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- COMBINED INTO ONE H1 TAG -->
+                    <h1>ENSA Fès Innovation Hub : Power Up</h1>
+                    <p>Accélère tes compétences technologiques.
+                        Réalise des projets à fort impact.
+                        Dynamise ton parcours en ingénierie !</p>
+                    <!-- Correct button text based on previous suggestion -->
+                    <a href="about.html" class="btn btn-primary">Discover Power Up</a>
+                     <!-- Optional: Add a secondary button -->
+                     <!-- <a href="join.html" class="btn btn-outline-light">Rejoignez-nous</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Snippet Section -->
+        <section class="about-snippet-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Qui sommes-nous ?</h2>
+                <div class="about-content">
+                    <p>Power Up Club est un club étudiant énergique et innovant à l'ENSA Fès, créé par des étudiants en Génie Énergétique & Systèmes Intelligents. Notre objectif ? Relier la formation aux défis réels en boostant les compétences en énergies vertes, IoT, automatisation et IA !</p>
+                    <a href="about.html" class="btn btn-text">En savoir plus sur Power Up »</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Highlight Section -->
+        <section class="events-highlight-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Prochains Événements</h2>
+                <div class="event-list">
+                    <!-- Repeat this block for each highlighted event (e.g., 1-3 events) -->
+                    <article class="event-item">
+                        <img src="images/Innov'tech_2025.jpg" alt="Event Image" class="card-image">
+                        <div class="event-info card-content">
+                            <h3>Innov'tech 2025</h3>
+                            <p class="event-date text-muted">13 Mai 2025</p>
+                            <p class="event-time-location text-muted">08:30 - Salle de conférences, ENSA Fes</p>
+                            <p>Le Power Up Club (Génie Énergétique & Systèmes Intelligents) et le Club Mechatronics trendz (Mécatronique) s'associent pour organiser une journée dédiée à l'innovation technologique et interdisciplinaire à l'ENSA Fès.</p>
+                            
+                            <p>Cet événement unique rassemble deux univers complémentaires :</p>
+                            
+                            <ul>
+                                <li>Les énergies du futur et les systèmes intelligents (Power Up)</li>
+                                <li>La robotique, l'automatisation et l'ingénierie mécatronique (Mechatronics trendz)</li>
+                            </ul>
+                            
+                            <a href="activities.html#innov-tech-2025" class="btn btn-small btn-primary">Explorez nos aventures</a>
+                        </div>
+                    </article>
+                    <!-- End of event item block -->
+
+                    <!-- Example placeholder for another event -->
+                     <article class="event-item">
+                         <!-- Added card-image class -->
+                        <img src="images/JESI_2026.jpg" alt="Event Image" class="card-image">
+                         <!-- Added card-content class -->
+                        <div class="event-info card-content">
+                            <h3>Journée énergetique et systemes Inteligent
+                                <br>Deuxième édition   -JESI 2026- 
+                            </h3>
+                             <!-- Added text-muted class -->
+                            <p class="event-date text-muted">21 et22 Avril 2026</p>
+                             <!-- Added text-muted class -->
+                            <p class="event-time-location text-muted">Salle de conférances à ENSA Fes</p>
+                            <p>Organisée par le Club POWER UP à l’ENSA Fès, JESI est un événement annuel incontournable qui réunit étudiants, chercheurs, professionnels et industriels autour des défis énergétiques et technologiques de demain.</p>
+                            <!-- Used btn-small class -->
+                            <a href="activities.html#jesi-2026" class="btn btn-small btn-primary">Explorez nos aventures</a>
+                        </div>
+                    </article>
+
+                </div>
+                <div class="text-center" style="margin-top: var(--space-xl);">  <!-- Used a specific style here for top margin -->
+                     <!-- Used btn-outline-primary class as it was styled -->
+                     <a href="activities.html" class="btn btn-outline-primary">Nos Activités</a>
+                </div>
+            </div>
+        </section>
+        <section class="news-snippet-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Dernières Actualités</h2>
+                 <div class="news-list">
+                    <!-- JESI 2025 article snippet -->
+                    <article class="news-item">
+                        <div class="card-content">
+                            <h3>JESI 2025 : Une Journée d’Innovation Énergétique à l’ENSA Fès</h3>
+                            <p class="news-meta text-muted">Publié le 22 Avril 2025</p>
+                            <p>✨ Le 21 avril, l’ENSA Fès a accueilli la Journée Énergétique et Systèmes Intelligents (JESI’2025), organisée par le club Power Up. L’événement a rassemblé des experts, étudiants et entreprises autour de conférences, tables rondes et compétitions technologiques.</p>
+                            <a href="news.html#jesi-2025" class="btn-text">Lire la suite »</a>
+                        </div>
+                    </article>
+                    <!-- Innov'tech 2025 article snippet -->
+                    <article class="news-item">
+                        <div class="card-content">
+                            <h3>Innov'tech 2025 Industrie intelligente : Mécatronique et Systèmes Énergétiques</h3>
+                            <p class="news-meta text-muted">Publié le 29 Avril 2025</p>
+                            <p>🔧 Le club Power Up, en partenariat avec le club Mecatronic Trenz, organise un événement inédit à l’ENSA Fès le 13 mai 2025. Cette journée réunira les passionnés d’innovation technologique autour de conférences techniques, d’ateliers pratiques et d’une compétition interclubs. Un rendez-vous à ne pas manquer pour les étudiants curieux et les esprits créatifs !</p>
+                            <a href="news.html#innovtech-2025" class="btn-text">Lire la suite »</a>
+                        </div>
+                    </article>
+                </div>
+                 <div class="text-center" style="margin-top: var(--space-xl);">
+                     <a href="news.html" class="btn btn-outline-primary">Voir toutes les Actualités</a>
+                </div>
+            </div>
+        </section>
+
+         <!-- Call to Action to Join Section -->
+        <section class="join-cta-section section-padding">
+            <div class="container text-center">
+                <h2>Prêt à Booster vos Compétences ?</h2>
+                <p class="lead-text">Rejoignez Power Up et faites partie d'une communauté dynamique d'étudiants passionnés par la technologie, l'innovation et le développement personnel.</p>
+                 <!-- Use btn-outline-light if section background is dark, otherwise btn-primary -->
+                 <!-- Since join-cta-section has brand-green background (darker), outline-light is a better choice for contrast -->
+                <a href="join.html" class="btn btn-lg btn-outline-light" style="color: white">Rejoignez Power Up !</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about-footer">
+                    <!-- Replace with your club logo or name -->
+                    <img src="images/powerup_logo.png" alt="Power Up ENSA Fes Logo" class="footer-logo">
+                    <p>Power Up is the go-to tech and innovation club at ENSA Fes.<br>
+                        learn, <br>
+                        build, <br>
+                        and lead!</p>
+                     <!-- Move copyright out of footer-content and add the copyright class -->
+                     <!-- This paragraph should be placed BELOW the footer-content div, but INSIDE the container -->
+                     <!-- <p class="copyright">© [Current Year] Power Up ENSA Fes. Tous droits réservés.</p> -->
+                </div>
+                <div class="footer-section quick-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="activities.html">Activités</a></li>
+                        <li><a href="projects.html">Projets</a></li>
+                        <li><a href="join.html">Rejoignez-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-media">
+                    <h3>Suivez-nous</h3>
+                    <ul class="social-icons">
+                        <!-- Added placeholder images for icons, update paths/styles -->
+                        <li><a href="[Your Facebook Link]" target="_blank" aria-label="Facebook"><img src="images/icon_facebook.svg" alt="Facebook Icon"></a></li> <!-- Use SVG icons if possible -->
+                        <li><a href="https://www.instagram.com/power_uuup?igsh=MWRuZ21zYXUwc3Fv" target="_blank" aria-label="Instagram"><img src="images/icon_instagram.svg" alt="Instagram Icon"></a></li>
+                        <li><a href="https://www.linkedin.com/company/club-powerup/" target="_blank" aria-label="LinkedIn"><img src="images/icon_linkedin.svg" alt="LinkedIn Icon"></a></li>
+                        <!-- Add more social media icons as needed, wrap image in the link -->
+                    </ul>
+                </div>
+                 <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:powerup.ensa@usmba.ac.ma">powerup.ensa@usmba.ac.ma</a></p>
+                    <p>Ecole Nationale des Sciences Appliquées, <br>
+                        Avenue My Abdallah Km 5<br>
+                        Route d'Imouzzer, Fès BP 72.</p>
+                    <p><a href="https://ensaf.ac.ma/" target="_blank">Visitez le site de l'ENSA Fes</a></p>
+                </div>
+            </div>
+            <!-- Add the copyright paragraph here, after footer-content but inside container -->
+            <p class="copyright">©2025 Power Up ENSA Fes. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Link to your main JavaScript file (often placed at the end of body for performance) -->
+    <script src="js/script.js"></script>
+    <!-- Optional: Add links for external JS libraries -->
+
+</body>
+</html>
