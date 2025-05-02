@@ -14,16 +14,130 @@
       padding: 0 20px;
     }
 
-    iframe {
+    form {
+      background-color: #232323;
+      padding: 2rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px #1ED76022;
+      border: 2px solid #1ED76033;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #e6ffe6;
+      font-size: 1.05rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
       width: 100%;
-      height: 500px;
+      padding: 12px;
+      margin-top: 8px;
+      background: #181818;
+      border: 1.5px solid #1ED76033;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #1ED760;
+      box-shadow: 0 0 0 2px #1ED76022;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231ED760' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #1ED760;
+      color: #181818;
       border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 12px #1ED76033;
+    }
+
+    button:hover {
+      background: #34FF79;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px #1ED76055;
+    }
+
+    #formStatus {
+      margin-top: 15px;
+      font-weight: 600;
+      text-align: center;
     }
 
     .hero-section::after {
       display: none !important;
     }
+
+    .main-content {
+      background: #181818;
+      min-height: 100vh;
+      padding: 4rem 0 3rem 0;
+      position: relative;
+    }
+
+    .main-content::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('images/background_1.png') center/cover no-repeat;
+      opacity: 0.10;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .main-content h1 {
+      color: #1ED760;
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .main-content > p {
+      color: #e6ffe6;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .form-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    ::placeholder {
+      color: #666;
+    }
   </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
   <!-- Header Section -->
@@ -51,12 +165,32 @@
     <p>Remplissez le formulaire ci-dessous :</p>
 
     <div class="form-container">
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSc3of2fQ1Lyn-UXZMmtnZluD-66z6hHJJU10Sn0m2tYOKE2AQ/viewform?usp=header"
-        loading="lazy"
-        title="Formulaire de contact">
-        Loading…
-      </iframe>
+      <form id="contactForm">
+        <label for="name">Nom complet *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Adresse email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Sujet *</label>
+        <select id="subject" name="subject" required>
+          <option value="">Choisissez un sujet</option>
+          <option value="General Inquiry">Demande générale</option>
+          <option value="Business Opportunity">Opportunité d'affaires</option>
+          <option value="Support Request">Demande de support</option>
+          <option value="Feedback">Retour d'information</option>
+          <option value="Other">Autre</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label for="details">Détails supplémentaires (facultatif)</label>
+        <textarea id="details" name="details" rows="3"></textarea>
+
+        <button type="submit">Envoyer</button>
+        <p id="formStatus"></p>
+      </form>
     </div>
   </main>
 
@@ -103,7 +237,49 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
+  <!-- JavaScript for Form Submission -->
+  <script>
+    (function() {
+      emailjs.init("wDxUaGp_JE1diIsGd"); // Initialisez avec votre clé publique EmailJS
+    })();
+
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Désactiver le bouton et montrer l'état de chargement
+      submitButton.disabled = true;
+      submitButton.textContent = 'Envoi en cours...';
+      formStatus.textContent = '';
+
+      // Préparer les paramètres pour l'email
+      const templateParams = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+        details: form.details.value
+      };
+
+      // Envoyer l'email via EmailJS
+      emailjs.send('service_qfnwwi6', 'template_bnv80wf', templateParams)
+        .then(function(response) {
+          formStatus.textContent = "Votre message a été envoyé avec succès !";
+          formStatus.style.color = "#1ED760";
+          form.reset();
+        }, function(error) {
+          console.error('Error:', error);
+          formStatus.textContent = "Erreur lors de l'envoi du message. Veuillez réessayer ou nous contacter directement à powerup.ensa@usmba.ac.ma";
+          formStatus.style.color = "#ff3333";
+        })
+        .finally(function() {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Envoyer';
+        });
+    });
+  </script>
 </body>
 </html>
