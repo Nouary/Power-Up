@@ -98,6 +98,18 @@
   display: none;
 }
 
+.header-title {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 1.2rem;
+  letter-spacing: -0.02em;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .header-content {
     display: flex;
@@ -117,6 +129,11 @@
     display: block;
     height: 40px;
     width: auto;
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
   }
 
   .main-nav {
