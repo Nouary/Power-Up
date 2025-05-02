@@ -209,3 +209,46 @@
   pickNewTarget();
   requestAnimationFrame(animateLogo);
 })();
+
+// Navigation menu toggle for mobile
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const body = document.body;
+
+  // Fonction pour fermer le menu
+  function closeMenu() {
+    mainNav.classList.remove('open');
+    body.classList.remove('nav-open');
+  }
+
+  if (navToggle && mainNav) {
+    // Toggle menu quand on clique sur le bouton hamburger
+    navToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mainNav.classList.toggle('open');
+      body.classList.toggle('nav-open');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(e) {
+      if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Empêcher la fermeture quand on clique dans le menu
+    mainNav.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+});
+
+<script src="js/script.js"></script>
