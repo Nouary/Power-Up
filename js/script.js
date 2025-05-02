@@ -18,18 +18,15 @@
     ctx.scale(dpr, dpr);
   }
 
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-
   // Particle config
-  const PARTICLE_COLOR = 'rgba(255,140,0,0.18)'; // More faded orange
-  const LINE_COLOR = 'rgba(255,140,0,0.10)'; // More faded lines
+  const PARTICLE_COLOR = 'rgba(255,140,0,0.18)';
+  const LINE_COLOR = 'rgba(255,140,0,0.10)';
   const MOUSE_LINE_COLOR = 'rgba(255,140,0,0.22)';
-  let PARTICLE_COUNT = Math.floor((width * height) / 6000) || 32;
   const PARTICLE_RADIUS = 2.2;
   const LINE_DISTANCE = 120;
   const MOUSE_DISTANCE = 140;
   const particles = [];
+  let PARTICLE_COUNT;
 
   function randomVel() {
     return (Math.random() - 0.5) * 0.7;
@@ -55,13 +52,11 @@
 
   function updateParticles() {
     for (const p of particles) {
-      // Mouse interaction: attract particles to mouse
       if (mouse.active && mouse.x !== null && mouse.y !== null) {
         const dx = mouse.x - p.x;
         const dy = mouse.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < MOUSE_DISTANCE) {
-          // Attraction force
           const force = (MOUSE_DISTANCE - dist) / MOUSE_DISTANCE * 0.04;
           p.vx += force * dx / dist;
           p.vy += force * dy / dist;
@@ -69,7 +64,6 @@
       }
       p.x += p.vx;
       p.y += p.vy;
-      // Slow down velocity for smoothness
       p.vx *= 0.98;
       p.vy *= 0.98;
       if (p.x < 0 || p.x > width) p.vx *= -1;
@@ -79,7 +73,6 @@
 
   function drawParticles() {
     ctx.clearRect(0, 0, width, height);
-    // Draw lines between particles
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const a = particles[i], b = particles[j];
@@ -95,7 +88,7 @@
         }
       }
     }
-    // Draw lines from mouse to close particles
+
     if (mouse.active && mouse.x !== null && mouse.y !== null) {
       for (const p of particles) {
         const dx = mouse.x - p.x;
@@ -111,7 +104,7 @@
         }
       }
     }
-    // Draw particles
+
     for (const p of particles) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
@@ -121,13 +114,6 @@
       ctx.fill();
       ctx.shadowBlur = 0;
     }
-    // Draw mouse point (optional, subtle)
-    // if (mouse.active && mouse.x !== null && mouse.y !== null) {
-    //   ctx.beginPath();
-    //   ctx.arc(mouse.x, mouse.y, 4, 0, 2 * Math.PI);
-    //   ctx.fillStyle = 'rgba(255,140,0,0.18)';
-    //   ctx.fill();
-    // }
   }
 
   function animate() {
@@ -146,27 +132,13 @@
   animate();
 
   // Mouse events
-  canvas.addEventListener('mousemove', function(e) {
-    const rect = canvas.getBoundingClientRect();
-    mouse.x = (e.clientX - rect.left);
-    mouse.y = (e.clientY - rect.top);
-    mouse.active = true;
-  });
-  canvas.addEventListener('mouseleave', function() {
-    mouse.active = false;
-    mouse.x = null;
-    mouse.y = null;
-  });
-  canvas.addEventListener('mouseenter', function(e) {
-    mouse.active = true;
-  });
-  // Also track mouse on window for better UX
   window.addEventListener('mousemove', function(e) {
     const rect = canvas.getBoundingClientRect();
-    mouse.x = (e.clientX - rect.left);
-    mouse.y = (e.clientY - rect.top);
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
     mouse.active = true;
   });
+
   window.addEventListener('mouseout', function() {
     mouse.active = false;
     mouse.x = null;
@@ -178,10 +150,11 @@
 (function() {
   const logo = document.getElementById('animated-logo');
   if (!logo) return;
-  // Animation bounds (left side only)
-  const minX = -60, maxX = 120; // px from left
-  const minY = 10, maxY = 70;   // px from 50% vertically
-  const minR = -24, maxR = 24;  // degrees
+
+  const minX = -60, maxX = 120;
+  const minY = 10, maxY = 70;
+  const minR = -24, maxR = 24;
+
   let target = { x: 0, y: 0, r: 0 };
   let current = { x: 0, y: 0, r: -18 };
   let lastTime = 0;
@@ -197,7 +170,6 @@
       pickNewTarget();
       lastTime = ts;
     }
-    // Smoothly interpolate toward target
     current.x += (target.x - current.x) * 0.008;
     current.y += (target.y - current.y) * 0.008;
     current.r += (target.r - current.r) * 0.008;
@@ -206,6 +178,7 @@
     logo.style.transform = `translateY(-50%) rotate(${current.r}deg) scale(1.08)`;
     requestAnimationFrame(animateLogo);
   }
+
   pickNewTarget();
   requestAnimationFrame(animateLogo);
 })();
@@ -216,38 +189,30 @@ document.addEventListener('DOMContentLoaded', function() {
   const mainNav = document.querySelector('.main-nav');
   const body = document.body;
 
-  // Fonction pour fermer le menu
   function closeMenu() {
     mainNav.classList.remove('open');
+    navToggle.classList.remove('open');
     body.classList.remove('nav-open');
   }
 
   if (navToggle && mainNav) {
-    // Toggle menu quand on clique sur le bouton hamburger
     navToggle.addEventListener('click', function(e) {
       e.stopPropagation();
       mainNav.classList.toggle('open');
       navToggle.classList.toggle('open');
       body.classList.toggle('nav-open');
-      // Afficher un message lors du clic
-      alert("Le menu fonctionne !");
     });
 
-    // Fermer le menu quand on clique sur un lien
     mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function() {
-        closeMenu();
-      });
+      link.addEventListener('click', closeMenu);
     });
 
-    // Fermer le menu quand on clique en dehors
     document.addEventListener('click', function(e) {
       if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
         closeMenu();
       }
     });
 
-    // Empêcher la fermeture quand on clique dans le menu
     mainNav.addEventListener('click', function(e) {
       e.stopPropagation();
     });
