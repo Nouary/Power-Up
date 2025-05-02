@@ -136,37 +136,44 @@
     ::placeholder {
       color: #666;
     }
+
+    /* Suppression du fond et du border-radius derrière le toggle sur la page contact */
+    .contact-page .header-content {
+      background: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
   </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
   <!-- Header Section -->
   <header class="site-header">
-    <div class="container">
-      <div class="header-content">
-        <img src="images/powerup_logo.png" alt="Power Up Logo" class="header-logo">
-        <span class="header-title">Contact</span>
-        <button class="nav-toggle" aria-label="Ouvrir le menu">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
-      </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">Qui sommes-nous</a></li>
-          <li><a href="activities.html">Activités</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="team.html">Notre Équipe</a></li>
-          <li><a href="join.html">Rejoignez-nous</a></li>
-          <li><a href="news.html">Actualités / Blog</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <div class="container">
+            <div class="header-content">
+                <img src="images/powerup_logo.png" alt="Power Up Logo" class="header-logo">
+                <span class="header-title">Contact</span>
+                <button class="nav-toggle" aria-label="Ouvrir le menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="activities.html">Activités</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="team.html">Notre Équipe</a></li>
+                    <li><a href="join.html">Rejoignez-nous</a></li>
+                    <li><a href="news.html">Actualités / Blog</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <!-- Main Content -->
   <main class="main-content">
@@ -290,5 +297,6 @@
         });
     });
   </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
