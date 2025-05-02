@@ -227,7 +227,10 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.addEventListener('click', function(e) {
       e.stopPropagation();
       mainNav.classList.toggle('open');
+      navToggle.classList.toggle('open');
       body.classList.toggle('nav-open');
+      // Afficher un message lors du clic
+      alert("Le menu fonctionne !");
     });
 
     // Fermer le menu quand on clique sur un lien
@@ -250,5 +253,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-<script src="js/script.js"></script>
