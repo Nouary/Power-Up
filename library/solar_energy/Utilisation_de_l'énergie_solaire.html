@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisation de l'énergie solaire - Power Up ENSA Fes</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="solar-page">
+    <canvas id="particles-canvas"></canvas>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <img src="../../images/powerup_logo.png" alt="Power Up Logo" class="header-logo">
+                <span class="header-title">Utilisation de l'énergie solaire</span>
+                <button class="nav-toggle" aria-label="Ouvrir le menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="../../about.html">Qui sommes-nous</a></li>
+                    <li><a href="../../activities.html">Activités</a></li>
+                    <li><a href="../../projects.html">Projets</a></li>
+                    <li><a href="../../team.html">Notre Équipe</a></li>
+                    <li><a href="../../join.html">Rejoignez-nous</a></li>
+                    <li><a href="../../news.html">Actualités / Blog</a></li>
+                    <li><a href="../../library.html" class="active">Bibliothèque</a></li>
+                    <li><a href="../../gallery.html">Galerie</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="solar-hero">
+            <div class="container">
+                <h1>Utilisation de l'énergie solaire</h1>
+                <p>Découvrez les applications pratiques et les différentes utilisations de l'énergie solaire.</p>
+            </div>
+        </section>
+
+        <section class="solar-section">
+            <div class="container">
+                <article class="solar-usage redesigned">
+                    <header class="usage-header">
+                        <h1 class="usage-title"><i class="fas fa-lightbulb"></i> L'Utilisation de l'Énergie Solaire</h1>
+                        <p class="usage-intro">Du toit de nos maisons aux mégaprojets du désert, l'énergie solaire s'infuse dans chaque aspect de notre quotidien. Découvrez comment cette énergie silencieuse transforme le monde, du plus petit foyer aux infrastructures nationales.</p>
+                    </header>
+                    <section class="usage-section">
+                        <h2><i class="fas fa-home"></i> 1. Échelle Résidentielle et Domestique</h2>
+                        <div class="usage-block">
+                            <h3>L'Autoconsommation Électrique</h3>
+                            <p>Des panneaux photovoltaïques installés sur le toit d'une maison ou d'un immeuble captent le soleil pour produire de l'électricité, consommée directement par les appareils du foyer.</p>
+                            <div class="usage-example">
+                                <span class="example-label">Exemple :</span> Une famille à Agadir installe des panneaux PV de 3 kWc. L'énergie produite alimente le réfrigérateur, la climatisation et les appareils en veille. Le surplus peut être injecté dans le réseau ou stocké dans une batterie domestique pour être utilisé le soir. Résultat : une facture d'électricité réduite de 50 à 70%.
+                            </div>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Autoconsommation1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Autoconsommation Électrique 1
+                                </a>
+                                <a href="../../pdf/solar/autoconsommation2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Autoconsommation Électrique 2
+                                </a>
+                                <a href="../../pdf/solar/autoconsommation3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Autoconsommation Électrique 3
+                                </a>
+                            </div>
+                        </div>
+                        <div class="usage-block">
+                            <h3>L'Éclairage et les Petits Appareils</h3>
+                            <p>Lampes de jardin solaires, kits d'éclairage pour sites isolés, ou chargeurs portables pour téléphones et ordinateurs.</p>
+                            <div class="usage-example">
+                                <span class="example-label">Exemple :</span> Un habitant du Haut Atlas utilise un kit solaire pour éclairer son foyer et recharger son téléphone.
+                            </div>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/L Eclairage et les Petits Appareils1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Éclairage et les Petits Appareils 1
+                                </a>
+                                <a href="../../pdf/solar/L Eclairage et les Petits Appareils2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Éclairage et les Petits Appareils 2
+                                </a>
+                                <a href="../../pdf/solar/L Eclairage et les Petits Appareils3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> L'Éclairage et les Petits Appareils 3
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="usage-section">
+                        <h2><i class="fas fa-industry"></i> 2. Applications Commerciales et Industrielles</h2>
+                        <div class="usage-block">
+                            <h3>Grandes Toitures Solaires</h3>
+                            <p>Les toits des supermarchés, usines ou entrepôts logistiques accueillent des installations PV de grande puissance.</p>
+                            <div class="usage-example">
+                                <span class="example-label">Exemple :</span> Un hypermarché Marjane à Casablanca couvre son toit de panneaux solaires pour alimenter ses chambres froides, l'éclairage et les caisses.
+                            </div>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Grandes Toitures Solaires1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Grandes Toitures Solaires 1
+                                </a>
+                                <a href="../../pdf/solar/Grandes Toitures Solaires2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Grandes Toitures Solaires 2
+                                </a>
+                                <a href="../../pdf/solar/Grandes Toitures Solaires3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Grandes Toitures Solaires 3
+                                </a>
+                            </div>
+                        </div>
+                        <div class="usage-block">
+                            <h3>Ombrières de Parking Solaires</h3>
+                            <p>Structures qui protègent les véhicules du soleil tout en produisant de l'électricité pour le bâtiment ou des bornes de recharge.</p>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Ombrières de Parking Solaires1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Ombrières de Parking Solaires 1
+                                </a>
+                                <a href="../../pdf/solar/Ombrières de Parking Solaires2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Ombrières de Parking Solaires 2
+                                </a>
+                                <a href="../../pdf/solar/Ombrières de Parking Solaires3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Ombrières de Parking Solaires 3
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="usage-section">
+                        <h2><i class="fas fa-seedling"></i> 3. Secteur Agricole</h2>
+                        <div class="usage-block">
+                            <h3>Pompage Solaire</h3>
+                            <p>Des pompes immergées alimentées par des panneaux solaires puisent l'eau des puits pour l'irrigation.</p>
+                            <div class="usage-example">
+                                <span class="example-label">Exemple :</span> Un agriculteur du Souss installe un système de pompage solaire, irrigue à coût quasi nul et sécurise ses récoltes.
+                            </div>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Pompage Solaire1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Pompage Solaire 1
+                                </a>
+                                <a href="../../pdf/solar/Pompage Solaire2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Pompage Solaire 2
+                                </a>
+                                <a href="../../pdf/solar/Pompage Solaire3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Pompage Solaire 3
+                                </a>
+                                <a href="../../pdf/solar/Pompage Solaire4.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Pompage Solaire 4
+                                </a>
+                            </div>
+                        </div>
+                        <div class="usage-block">
+                            <h3>Électrification de Serres et Bâtiments Agricoles</h3>
+                            <p>Le solaire alimente la ventilation des serres, l'irrigation goutte-à-goutte, l'éclairage des étables et les équipements de conservation.</p>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Électrification de Serres et Bâtiments Agricoles1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Électrification de Serres et Bâtiments Agricoles 1
+                                </a>
+                                <a href="../../pdf/solar/Électrification de Serres et Bâtiments Agricoles2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Électrification de Serres et Bâtiments Agricoles 2
+                                </a>
+                                <a href="../../pdf/solar/Électrification de Serres et Bâtiments Agricoles3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Électrification de Serres et Bâtiments Agricoles 3
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="usage-section">
+                        <h2><i class="fas fa-city"></i> 4. Grandes Centrales et Infrastructures Publiques</h2>
+                        <div class="usage-block">
+                            <h3>Centrales Photovoltaïques au Sol</h3>
+                            <p>De vastes étendues de terre couvertes de panneaux PV injectent l'électricité sur le réseau de haute tension.</p>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Centrales Photovoltaïques au Sol1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Centrales Photovoltaïques au Sol 1
+                                </a>
+                                <a href="../../pdf/solar/Centrales Photovoltaïques au Sol2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Centrales Photovoltaïques au Sol 2
+                                </a>
+                                <a href="../../pdf/solar/Centrales Photovoltaïques au Sol3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Centrales Photovoltaïques au Sol 3
+                                </a>
+                            </div>
+                        </div>
+                        <div class="usage-block">
+                            <h3>Dessalement de l'Eau de Mer</h3>
+                            <p>L'énergie solaire alimente les usines de dessalement, enjeu stratégique pour la sécurité hydrique.</p>
+                            <div class="usage-example">
+                                <span class="example-label">Exemple :</span> La station de dessalement de Dakhla, alimentée par un parc éolien et solaire, fournit de l'eau potable et irrigue des milliers d'hectares.
+                            </div>
+                            <div class="usage-pdf-list">
+                                <a href="../../pdf/solar/Dessalement de l'Eau de Mer1.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Dessalement de l'Eau de Mer 1
+                                </a>
+                                <a href="../../pdf/solar/Dessalement de l'Eau de Mer2.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Dessalement de l'Eau de Mer 2
+                                </a>
+                                <a href="../../pdf/solar/Dessalement de l'Eau de Mer3.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Dessalement de l'Eau de Mer 3
+                                </a>
+                                <a href="../../pdf/solar/Dessalement de l'Eau de Mer4.pdf" class="btn btn-download dark" download>
+                                    <i class="fas fa-file-pdf"></i> Dessalement de l'Eau de Mer 4
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </section>
+
+        <section class="nav-section">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="../solar.html" class="btn btn-solar">
+                        <i class="fas fa-arrow-left"></i>
+                        Retour à l'énergie solaire
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about-footer">
+                    <img src="../../images/powerup_logo.png" alt="Power Up ENSA Fes Logo" class="footer-logo">
+                    <p>Power Up is the go-to tech and innovation club at ENSA Fes.<br>
+                        learn, <br>
+                        build, <br>
+                        and lead!</p>
+                </div>
+                <div class="footer-section quick-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="../../about.html">Qui sommes-nous</a></li>
+                        <li><a href="../../activities.html">Activités</a></li>
+                        <li><a href="../../projects.html">Projets</a></li>
+                        <li><a href="../../join.html">Rejoignez-nous</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-media">
+                    <h3>Suivez-nous</h3>
+                    <ul class="social-icons">
+                        <li><a href="#" target="_blank" aria-label="Facebook"><img src="../../images/icon_facebook.svg" alt="Facebook Icon"></a></li>
+                        <li><a href="#" target="_blank" aria-label="Instagram"><img src="../../images/icon_instagram.svg" alt="Instagram Icon"></a></li>
+                        <li><a href="#" target="_blank" aria-label="LinkedIn"><img src="../../images/icon_linkedin.svg" alt="LinkedIn Icon"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                </div>
+            </div>
+            <p class="copyright">©2025 Power Up ENSA Fes. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
