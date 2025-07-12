@@ -1559,7 +1559,8 @@ body, html {
 .team-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: url('../images/background_1.png') center/cover no-repeat;
   opacity: 0.10;
   z-index: 1;
@@ -1702,7 +1703,6 @@ body, html {
   transition: transform 0.3s cubic-bezier(0.4,1,0.4,1), box-shadow 0.3s cubic-bezier(0.4,1,0.4,1), filter 0.3s cubic-bezier(0.4,1,0.4,1);
   box-shadow: 0 2px 12px #1ED76033;
   z-index: 1;
-  position: relative;
 }
 
 @media (max-width: 600px) {
@@ -1766,4 +1766,740 @@ body.lightbox-active header,
 body.lightbox-active footer {
   filter: blur(5px);
   pointer-events: none;
+}
+
+/* === Solar Resource Page Styles === */
+.solar-resource {
+    padding: var(--space-xxl) 0;
+}
+
+.section-content {
+    margin-bottom: var(--space-xxl);
+    background: var(--dark-gray);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.section-content h1 {
+    color: var(--brand-green);
+    margin-bottom: var(--space-xl);
+    font-size: 2.5rem;
+}
+
+.topic-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.topic-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item h2 {
+    color: var(--brand-green-light);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.topic-item p {
+    color: var(--text-on-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.nav-buttons {
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        padding: var(--space-lg);
+    }
+
+    .topic-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Solar Energy Page Specific Styles */
+.solar-page {
+    --solar-yellow: #FFD700;
+    --solar-orange: #FF6B00;
+    --solar-glow: 0 0 20px rgba(255, 215, 0, 0.3);
+    background: var(--near-black);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated solar system background effect */
+.solar-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at center, var(--solar-yellow) 0%, transparent 0.1%),
+        radial-gradient(circle at 20% 20%, var(--solar-orange) 0%, transparent 0.1%),
+        radial-gradient(circle at 80% 80%, var(--brand-green) 0%, transparent 0.1%);
+    opacity: 0.1;
+    z-index: 0;
+    animation: solarPulse 8s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes solarPulse {
+    0%, 100% {
+        background-size: 200px 200px, 150px 150px, 180px 180px;
+    }
+    50% {
+        background-size: 220px 220px, 170px 170px, 200px 200px;
+    }
+}
+
+.solar-hero {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, var(--near-black) 100%);
+    padding: 120px 0 80px;
+    overflow: hidden;
+}
+
+.solar-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: var(--solar-yellow);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    animation: solarGlow 4s infinite ease-in-out;
+}
+
+@keyframes solarGlow {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.2;
+    }
+}
+
+.solar-hero h1 {
+    color: var(--white);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.solar-hero p {
+    color: var(--light-gray);
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.solar-section {
+    position: relative;
+    padding: 80px 0;
+    background: var(--near-black);
+}
+
+.solar-section-gray {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.solar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.solar-card {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.solar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.03), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.solar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
+.solar-card:hover::before {
+    transform: translateX(100%);
+}
+
+.solar-card .icon {
+    font-size: 2.5rem;
+    color: var(--solar-yellow);
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    text-shadow: var(--solar-glow);
+}
+
+.solar-card h3 {
+    color: var(--brand-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.solar-card p {
+    color: var(--light-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.solar-section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.solar-section-title h2 {
+    color: var(--brand-green);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.solar-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--solar-yellow);
+    border-radius: 2px;
+    box-shadow: var(--solar-glow);
+}
+
+/* Library Page Specific Styles */
+.library-page {
+    --solar-yellow: #FFD700;
+    --dark-bg: #1a1a1a;
+    --darker-bg: #121212;
+    --card-bg: #2a2a2a;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.library-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.library-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, var(--brand-green) 0%, transparent 70%);
+    opacity: 0.2;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.2); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.2; }
+}
+
+.library-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.library-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.library-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.library-section-dark {
+    background-color: var(--darker-bg);
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.library-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.library-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-green), var(--solar-yellow));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.library-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-green);
+}
+
+.library-card:hover::before {
+    transform: scaleX(1);
+}
+
+.library-card h3 {
+    color: var(--brand-green);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.library-card .icon {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--brand-green), var(--solar-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.library-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.library-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--brand-green), var(--solar-yellow));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.library-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--solar-yellow), var(--brand-green));
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.library-btn:hover::before {
+    opacity: 1;
+}
+
+.library-section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.library-section-title h2 {
+    color: var(--brand-green);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.library-section-title p {
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .library-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .library-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .library-section {
+        padding: 40px 0;
+    }
+}
+
+/* Wind Energy Page Specific Styles */
+.wind-page {
+    --wind-blue: #64B5F6;
+    --wind-cyan: #4DD0E1;
+    --wind-glow: 0 0 20px rgba(100, 181, 246, 0.3);
+    background: var(--near-black);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wind-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at center, var(--wind-blue) 0%, transparent 0.1%),
+        radial-gradient(circle at 20% 20%, var(--wind-cyan) 0%, transparent 0.1%),
+        radial-gradient(circle at 80% 80%, var(--brand-green) 0%, transparent 0.1%);
+    opacity: 0.1;
+    z-index: 0;
+    animation: windPulse 8s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes windPulse {
+    0%, 100% {
+        background-size: 200px 200px, 150px 150px, 180px 180px;
+    }
+    50% {
+        background-size: 220px 220px, 170px 170px, 200px 200px;
+    }
+}
+
+.wind-resource {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, var(--near-black) 100%);
+    padding: 120px 0 80px;
+    overflow: hidden;
+}
+
+.wind-resource::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: var(--wind-blue);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    animation: windGlow 4s infinite ease-in-out;
+}
+
+@keyframes windGlow {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.2;
+    }
+}
+
+.wind-resource .section-content {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(100, 181, 246, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.wind-resource .section-content h1 {
+    color: var(--wind-blue);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: var(--wind-glow);
+}
+
+.wind-resource .topic-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.wind-resource .topic-item {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(100, 181, 246, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.wind-resource .topic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(100, 181, 246, 0.1);
+    border-color: rgba(100, 181, 246, 0.2);
+}
+
+.wind-resource .topic-item h2 {
+    color: var(--brand-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.wind-resource .topic-item p {
+    color: var(--light-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.wind-resource .nav-buttons {
+                                                 text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, var(--wind-blue), var(--brand-green));
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wind-glow);
+}
+
+/* YouTube Preview Styles */
+.youtube-preview {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.youtube-preview img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.youtube-preview .youtube-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background: rgba(255, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.youtube-preview .youtube-overlay i {
+    color: white;
+    font-size: 30px;
+}
+
+.youtube-preview:hover img {
+    transform: scale(1.02);
+}
+
+.youtube-preview:hover .youtube-overlay {
+    opacity: 1;
+}
+
+/* Download Button Styles */
+.download-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--brand-green);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Downloads Grid Styles */
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.download-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.download-item h3 {
+    color: var(--brand-green);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.download-item p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.download-item .btn-download {
+    align-self: flex-start;
+    margin-top: auto;
+    background-color: var(--brand-green);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-item .btn-download:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-item .btn-download i {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .downloads-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-item {
+        text-align: center;
+    }
+    
+    .download-item .btn-download {
+        align-self: center;
+    }
 }
