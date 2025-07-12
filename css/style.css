@@ -2140,6 +2140,7 @@ body.lightbox-active footer {
     font-size: 2.5rem;
     background: linear-gradient(45deg, var(--brand-green), var(--solar-yellow));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
 }
