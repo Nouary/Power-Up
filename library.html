@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque - Power Up ENSA Fes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="library-page">
+    <canvas id="particles-canvas"></canvas>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <img src="images/powerup_logo.png" alt="Power Up Logo" class="header-logo">
+                <span class="header-title">Bibliothèque</span>
+                <button class="nav-toggle" aria-label="Ouvrir le menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="activities.html">Activités</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="team.html">Notre Équipe</a></li>
+                    <li><a href="join.html">Rejoignez-nous</a></li>
+                    <li><a href="news.html">Actualités / Blog</a></li>
+                    <li><a href="library.html" class="active">Bibliothèque</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="library-hero">
+            <div class="container">
+                <h1>Bibliothèque des Ressources</h1>
+                <p class="lead">Explorez notre collection de ressources éducatives sur les énergies renouvelables et la technologie durable.</p>
+            </div>
+        </section>
+
+        <section class="library-section">
+            <div class="container">
+                <div class="library-section-title">
+                    <h2>Ressources Disponibles</h2>
+                    <p>Découvrez nos guides complets sur les différentes formes d'énergie renouvelable.</p>
+                </div>
+                <div class="library-grid">
+                    <div class="library-card">
+                        <i class="fas fa-sun icon"></i>
+                        <h3>Énergie Solaire</h3>
+                        <p>Découvrez le fonctionnement, les technologies et les applications de l'énergie solaire. Un guide complet sur cette source d'énergie renouvelable.</p>
+                        <a href="library/solar.html" class="library-btn">Explorer</a>
+                    </div>
+                    <div class="library-card">
+                        <i class="fas fa-wind icon"></i>
+                        <h3>Énergie Éolienne</h3>
+                        <p>Apprenez tout sur l'énergie éolienne, son fonctionnement et son impact sur notre futur énergétique.</p>
+                        <a href="library/wind.html" class="library-btn">Explorer</a>
+                    </div>
+                    <div class="library-card">
+                        <i class="fas fa-water icon"></i>
+                        <h3>Énergie Hydraulique</h3>
+                        <p>Plongez dans le monde de l'énergie hydraulique et découvrez comment l'eau peut générer de l'électricité.</p>
+                        <a href="#" class="library-btn">Bientôt disponible</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="library-section library-section-dark">
+            <div class="container">
+                <div class="library-section-title">
+                    <h2>Ressources Techniques</h2>
+                    <p>Des guides pratiques pour les aspects techniques des énergies renouvelables.</p>
+                </div>
+                <div class="library-grid">
+                    <div class="library-card">
+                        <i class="fas fa-cogs icon"></i>
+                        <h3>Guides d'Installation</h3>
+                        <p>Guides détaillés pour l'installation de systèmes d'énergie renouvelable.</p>
+                        <a href="#" class="library-btn">Bientôt disponible</a>
+                    </div>
+                    <div class="library-card">
+                        <i class="fas fa-calculator icon"></i>
+                        <h3>Calculateurs</h3>
+                        <p>Outils de calcul pour dimensionner vos installations énergétiques.</p>
+                        <a href="#" class="library-btn">Bientôt disponible</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about-footer">
+                    <!-- Replace with your club logo or name -->
+                    <img src="images/powerup_logo.png" alt="Power Up ENSA Fes Logo" class="footer-logo">
+                    <p>Power Up is the go-to tech and innovation club at ENSA Fes.<br>
+                        learn, <br>
+                        build, <br>
+                        and lead!</p>
+                     <!-- Move copyright out of footer-content and add the copyright class -->
+                     <!-- This paragraph should be placed BELOW the footer-content div, but INSIDE the container -->
+                     <!-- <p class="copyright">© [Current Year] Power Up ENSA Fes. Tous droits réservés.</p> -->
+                </div>
+                <div class="footer-section quick-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="activities.html">Activités</a></li>
+                        <li><a href="projects.html">Projets</a></li>
+                        <li><a href="join.html">Rejoignez-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-media">
+                    <h3>Suivez-nous</h3>
+                    <ul class="social-icons">
+                        <!-- Added placeholder images for icons, update paths/styles -->
+                        <li><a href="[Your Facebook Link]" target="_blank" aria-label="Facebook"><img src="images/icon_facebook.svg" alt="Facebook Icon"></a></li> <!-- Use SVG icons if possible -->
+                        <li><a href="https://www.instagram.com/power_uuup?igsh=MWRuZ21zYXUwc3Fv" target="_blank" aria-label="Instagram"><img src="images/icon_instagram.svg" alt="Instagram Icon"></a></li>
+                        <li><a href="https://www.linkedin.com/company/club-powerup/" target="_blank" aria-label="LinkedIn"><img src="images/icon_linkedin.svg" alt="LinkedIn Icon"></a></li>
+                        <!-- Add more social media icons as needed, wrap image in the link -->
+                    </ul>
+                </div>
+                 <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:powerup.ensa@usmba.ac.ma">powerup.ensa@usmba.ac.ma</a></p>
+                    <p>Ecole Nationale des Sciences Appliquées, <br>
+                        Avenue My Abdallah Km 5<br>
+                        Route d'Imouzzer, Fès BP 72.</p>
+                    <p><a href="https://ensaf.ac.ma/" target="_blank">Visitez le site de l'ENSA Fes</a></p>
+                </div>
+            </div>
+            <!-- Add the copyright paragraph here, after footer-content but inside container -->
+            <p class="copyright">©2025 Power Up ENSA Fes. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Link to your main JavaScript file (often placed at the end of body for performance) -->
+    <script src="js/script.js"></script>
+    <!-- Optional: Add links for external JS libraries -->
+
+</body>
+</html>
