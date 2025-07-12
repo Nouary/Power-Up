@@ -2340,20 +2340,23 @@ body.lightbox-active footer {
 }
 
 .btn-secondary {
-    background: linear-gradient(45deg, var(--wind-blue), var(--brand-green));
-    color: var(--white);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ff5252;
+    border-radius: 25px;
+    padding: 0.7rem 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     border: none;
-    position: relative;
-    overflow: hidden;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
-
 .btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--wind-glow);
+    background: linear-gradient(90deg, #414345 0%, #232526 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
 /* YouTube Preview Styles */
@@ -2502,4 +2505,135 @@ body.lightbox-active footer {
     .download-item .btn-download {
         align-self: center;
     }
+}
+
+/* --- Section Utilisation de l'énergie solaire : Dark Theme --- */
+.solar-usage.redesigned {
+    background: linear-gradient(135deg, #181c24 0%, #232a36 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+    padding: 2.5rem 2rem;
+    margin: 2rem 0;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    color: #e3eafc;
+    position: relative;
+    overflow: hidden;
+}
+.solar-usage.redesigned::before {
+    content: "";
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, #fbc02d33 0%, transparent 70%);
+    z-index: 0;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.usage-title i {
+    color: #fbc02d;
+    font-size: 2.2rem;
+}
+.usage-intro {
+    font-size: 1.15rem;
+    color: var(--dark-gray, #444);
+    margin-bottom: 0.5rem;
+}
+.usage-section {
+    margin-bottom: 2.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.usage-section:last-child {
+    border-bottom: none;
+}
+.usage-section h2 {
+    font-size: 1.35rem;
+    color: var(--brand-green, #2e7d32);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.usage-section h2 i {
+    color: #fbc02d;
+    font-size: 1.3rem;
+}
+.usage-block {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 1.2rem 1rem 1.2rem 1.2rem;
+    margin-bottom: 1.2rem;
+    transition: box-shadow 0.2s;
+}
+.usage-block:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.usage-block h3 {
+    font-size: 1.08rem;
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+}
+.usage-block p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+.usage-example {
+    background: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.98rem;
+    color: #1976d2;
+}
+.example-label {
+    font-weight: 600;
+    color: #1565c0;
+    margin-right: 0.3rem;
+}
+@media (max-width: 900px) {
+    .solar-usage.redesigned {
+        padding: 1.2rem 0.5rem;
+    }
+    .usage-title {
+        font-size: 1.3rem;
+    }
+    .usage-section h2 {
+        font-size: 1.1rem;
+    }
+    .usage-block {
+        padding: 0.8rem 0.5rem;
+    }
+}
+
+/* PDF Download Button Styles in Dark Mode */
+.usage-pdf-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.7rem;
+}
+.btn-download.dark {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #ff5252;
+    border-radius: 25px;
+    padding: 0.7rem 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn-download.dark:hover {
+    background: linear-gradient(90deg, #414345 0%, #232526 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.btn-download.dark i {
+    font-size: 1.2em;
 }
