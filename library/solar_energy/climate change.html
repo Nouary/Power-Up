@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisation de l'énergie solaire - Power Up ENSA Fes</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="climate-page">
+    <canvas id="particles-canvas"></canvas>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/climate-change.css">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <img src="../../images/powerup_logo.png" alt="Power Up Logo" class="header-logo">
+                <span class="header-title">Utilisation de l'énergie solaire</span>
+                <button class="nav-toggle" aria-label="Ouvrir le menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="../../about.html">Qui sommes-nous</a></li>
+                    <li><a href="../../activities.html">Activités</a></li>
+                    <li><a href="../../projects.html">Projets</a></li>
+                    <li><a href="../../team.html">Notre Équipe</a></li>
+                    <li><a href="../../join.html">Rejoignez-nous</a></li>
+                    <li><a href="../../news.html">Actualités / Blog</a></li>
+                    <li><a href="../../library.html" class="active">Bibliothèque</a></li>
+                    <li><a href="../../gallery.html">Galerie</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="solar-hero">
+            <div class="container">
+                <h1>Changement climatique : Définition, causes et impacts</h1>
+                
+                <div class="table-of-contents" style="background: rgba(0,0,0,0.1); padding: 2em; border-radius: 10px; margin: 2em 0;">
+                    <h2>Table des matières</h2>
+                    <ul>
+                        <li><a href="#definition">1. Définition du changement climatique</a></li>
+                        <li><a href="#causes">2. Causes du changement climatique</a>
+                            <ul>
+                                <li><a href="#ges">2.1 L'effet de serre et les gaz responsables</a></li>
+                                <li><a href="#activites-humaines">2.2 Activités humaines responsables</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#consequences">3. Conséquences du changement climatique</a>
+                            <ul>
+                                <li><a href="#sante">3.1 Impacts sur la santé humaine</a></li>
+                                <li><a href="#energie">3.2 Impacts sur l'énergie</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#solaire">4. Relation entre changement climatique et énergie solaire</a></li>
+                    </ul>
+                </div>
+
+                <div class="climate-definition" style="margin-top:2em;">
+                    <div class="definition-container" style="display: flex; align-items: flex-start; gap: 2rem;">
+                        <div class="definition-text">
+                            <h2 id="definition">1. Définition du changement climatique</h2>
+                            <p>Le changement climatique désigne une modification durable des conditions climatiques de la Terre à l'échelle planétaire, caractérisée principalement par une augmentation générale des températures moyennes, ainsi que par des modifications des régimes météorologiques à grande échelle. Ce phénomène, sans précédent par sa rapidité, est principalement causé par les activités humaines depuis le milieu du XXe siècle, comme le souligne le Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC).</p>
+                        </div>
+                        <div class="definition-image" style="flex-shrink: 0;">
+                            <img src="../../images/library/solar/changement climatique/changement climatique.jpg" alt="Illustration du changement climatique" style="width: 500px; height: 350px; object-fit: cover; border-radius: 40px; box-shadow: 0 12px 32px rgba(0,0,0,0.30);">
+                        </div>
+                    </div>
+
+                    <h2 id="causes">2. Causes du changement climatique</h2>
+                    <h3 id="ges">2.1 L'effet de serre et les gaz responsables</h3>
+L'atmosphère terrestre contient naturellement des gaz à effet de serre qui piègent la chaleur solaire et maintiennent une température compatible avec la vie. Cependant, depuis l'ère industrielle, les concentrations de certains gaz ont fortement augmenté en raison des activités humaines. Le CO₂ est le principal gaz émis, suivi du méthane et du protoxyde d'azote, ainsi que des gaz fluorés ayant un pouvoir réchauffant très élevé.</p>
+                    <div class="ges-container" style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
+                        <div class="ges-text" style="flex: 2;">
+                            <p>Le changement climatique est principalement causé par les activités humaines qui accroissent les émissions de gaz à effet de serre (GES), notamment le dioxyde de carbone (CO₂), le méthane (CH₄) et le protoxyde d'azote (N₂O), renforçant ainsi l'effet de serre naturel et provoquant le réchauffement de la planète.<br><br>
+L'atmosphère terrestre contient naturellement des gaz à effet de serre qui piègent la chaleur solaire et maintiennent une température compatible avec la vie. Cependant, depuis l'ère industrielle, les concentrations de certains gaz ont fortement augmenté en raison des activités humaines. Le CO₂ est le principal gaz émis, suivi du méthane et du protoxyde d'azote, ainsi que des gaz fluorés ayant un pouvoir réchauffant très élevé.</p>
+                        </div>
+                        <div class="ges-image" style="flex-shrink: 0;">
+                            <img src="../../images/library/solar/changement climatique/effet de serre.png" alt="Effet de serre" style="width: 500px; height: 350px; object-fit: cover; border-radius: 40px; box-shadow: 0 12px 32px rgba(0,0,0,0.30);">
+                            <p style="font-size: 0.95em; margin-top: 0.5em; color: #888; text-align: center;">Source : <a href="https://www.oieau.fr/Mediatheque/illustrations/leffet-de-serre" target="_blank" style="color: #b21f1f; text-decoration: underline;">oieau.fr</a></p>
+                        </div>
+                    </div>
+                    
+                    <h3 id="activites-humaines">2.2 Activités humaines responsables</h3>
+                    <ul>
+                        <li><b>Combustion de combustibles fossiles</b> (charbon, pétrole, gaz) : Source majeure de CO₂ pour l'électricité, le chauffage, l'industrie et les transports (plus de 75 % des émissions totales).</li>
+                        <li><b>Déforestation</b> : Libère le carbone stocké et réduit la capacité d'absorption du CO₂.</li>
+                        <li><b>Agriculture intensive et élevage</b> : Production de méthane et protoxyde d'azote, usage d'engrais azotés.</li>
+                        <li><b>Industrie et production d'énergie</b> : Procédés industriels, ciment, sidérurgie, combustion énergétique.</li>
+                        <li><b>Transports</b> : Véhicules routiers, aériens, maritimes utilisant des carburants fossiles.</li>
+                        <li><b>Urbanisation et infrastructures</b> : Construction, bétonisation, consommation énergétique des bâtiments.</li>
+                        <li><b>Causes naturelles</b> : Variations solaires ou volcaniques, impact mineur comparé à l'activité humaine.</li>
+                    </ul>
+                    
+                    <p class="source-links"><b>Sources :</b> <a href="https://climate.ec.europa.eu/climate-change/causes-climate-change_fr" target="_blank">Commission européenne</a>, <a href="https://www.myclimate.org/fr-ch/sinformer/faq/faq-detail/quelles-sont-les-causes-du-changement-climatique/" target="_blank">MyClimate</a>, <a href="https://www.radiofrance.fr/franceculture/quelles-sont-les-principales-causes-du-rechauffement-climatique-8576242" target="_blank">France Culture</a></p>
+
+                    <h2 id="consequences">3. Conséquences du changement climatique</h2>
+                    <h3 id="sante">3.1 Impacts sur la santé humaine</h3>
+                    <ul>
+                        <li><b>Vagues de chaleur et stress thermique</b> : Déshydratation, coups de chaleur, aggravation des pathologies cardiovasculaires et respiratoires.</li>
+                        <li><b>Événements météorologiques extrêmes</b> : Blessures, noyades, traumatismes physiques et psychologiques.</li>
+                        <li><b>Pathologies rénales et cardiovasculaires</b> : Liées à la chaleur et à la pollution.</li>
+                        <li><b>Inégalités renforcées</b> : Les populations vulnérables sont les plus exposées.</li>
+                        <li><b>Projections</b> : 250 000 à 300 000 décès annuels supplémentaires entre 2030 et 2050, migrations climatiques massives.</li>
+                    </ul>
+                    <p class="source-links"><b>Sources :</b> <a href="https://www.who.int/fr/news-room/fact-sheets/detail/climate-change-and-health" target="_blank">OMS</a>, GIEC, <a href="https://www.encyclopedie-environnement.org/sante/changement-climatique-effets-sante-de-lhomme/" target="_blank">Encyclopédie de l'environnement</a></p>
+
+                    <h3 id="energie">3.2 Impacts sur la production et la consommation d'énergie</h3>
+                    <ul>
+                        <li><b>Dépendance aux énergies fossiles</b> : Principale source d'émissions de GES, aggravant le réchauffement.</li>
+                        <li><b>Effets sur les énergies renouvelables</b> : Canicules, variabilité des vents et précipitations affectent le rendement solaire, éolien, hydroélectrique.</li>
+                        <li><b>Risque accru pour les infrastructures</b> : Tempêtes, inondations, sécheresses endommagent les installations énergétiques.</li>
+                        <li><b>Baisse des besoins en chauffage</b> : Moins de chauffage en hiver dans les régions tempérées.</li>
+                        <li><b>Augmentation des besoins en climatisation</b> : Plus de refroidissement nécessaire lors des vagues de chaleur.</li>
+                        <li><b>Complexification des profils de consommation</b> : Pics de demande électrique, besoin de réseaux plus flexibles.</li>
+                        <li><b>Comportements sociétaux</b> : Adaptation via efficacité énergétique, isolation, végétalisation urbaine.</li>
+                    </ul>
+                    <p class="source-links"><b>Sources :</b> <a href="https://particuliers.alpiq.fr/guide-energie/energie-renouvelable/changement-climatique-energie-renouvelable" target="_blank">Alpiq</a>, <a href="https://ecopedia.fr/guide/consequences-changement-climatique/" target="_blank">Ecopedia</a>, <a href="https://www.habitatetconseil.com/comment-la-consommation-d-energie-influence-t-elle-le-changement-climatique/" target="_blank">Habitat et Conseil</a>, <a href="https://www.adaptation-changement-climatique.gouv.fr/comprendre/enjeux/que-nous-dit-la-science" target="_blank">Gouvernement français</a></p>
+
+                    <h2 id="solaire">4. Relation entre changement climatique et énergie solaire</h2>
+                    <div class="solar-climate-relationship">
+                        <h3>L'énergie solaire comme solution</h3>
+                        <ul>
+                            <li><b>Alternative aux énergies fossiles</b> : L'énergie solaire représente une source d'énergie propre et renouvelable qui n'émet pas de gaz à effet de serre lors de la production d'électricité.</li>
+                            <li><b>Réduction des émissions</b> : Chaque kilowattheure produit par l'énergie solaire permet d'éviter l'émission d'environ 400g de CO₂ comparé aux énergies fossiles.</li>
+                            <li><b>Adaptation aux changements climatiques</b> : Les installations solaires peuvent être adaptées pour résister aux conditions météorologiques extrêmes.</li>
+                        </ul>
+
+                        <h3>Défis et opportunités</h3>
+                        <ul>
+                            <li><b>Impact des températures élevées</b> : Les rendements des panneaux solaires peuvent diminuer lors des canicules, nécessitant des innovations technologiques.</li>
+                            <li><b>Résilience énergétique</b> : L'énergie solaire décentralisée renforce la résilience des réseaux face aux événements climatiques extrêmes.</li>
+                            <li><b>Innovation technologique</b> : Le changement climatique stimule la recherche pour améliorer l'efficacité et la résistance des technologies solaires.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="downloads-section" style="padding: 4rem 0; background: rgba(0,0,0,0.1);">
+            <div class="container">
+                <h2 style="text-align: center; color: #fdbb2d; margin-bottom: 2rem;">Documents à télécharger</h2>
+                
+                <div class="downloads-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Documents sur le changement climatique -->
+                    <div class="download-category" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px;">
+                        <h3 style="color: #fff; margin-bottom: 1.5rem;">Documents sur le changement climatique</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/changement climatique 1.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Changement climatique -  1
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/changement climatique 2.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Changement climatique -  2
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/changement climatique 3.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Changement climatique -  3
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/changement climatique 4.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Changement climatique -  4
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/changement climatique 5.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Changement climatique -  5
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Documents sur les impacts -->
+                    <div class="download-category" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px;">
+                        <h3 style="color: #fff; margin-bottom: 1.5rem;">Documents sur les impacts</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/impact changement climatique 1.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Impact du changement climatique -  1
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/impact changement climatique 2.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Impact du changement climatique - 2
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <a href="../../pdf/solar/climat change/impact changement climatique 3.pdf" download style="display: flex; align-items: center; color: #fff; text-decoration: none; padding: 0.8rem; background: rgba(253,187,45,0.1); border-radius: 10px; transition: all 0.3s ease;">
+                                    <i class="fas fa-file-pdf" style="margin-right: 1rem; color: #fdbb2d;"></i>
+                                    Impact du changement climatique - 3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-section">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="../solar.html" class="btn btn-solar">
+                        Retour à l'énergie solaire
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about-footer">
+                        <img src="../../images/powerup_logo.png" alt="Power Up ENSA Fes Logo" class="footer-logo">
+                        <p>Power Up is the go-to tech and innovation club at ENSA Fes.<br>
+                            learn, <br>
+                            build, <br>
+                            and lead!</p>
+                    </div>
+                    <div class="footer-section quick-links">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="../../about.html">Qui sommes-nous</a></li>
+                            <li><a href="../../activities.html">Activités</a></li>
+                            <li><a href="../../projects.html">Projets</a></li>
+                            <li><a href="../../join.html">Rejoignez-nous</a></li>
+                            <li><a href="../../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section social-media">
+                        <h3>Suivez-nous</h3>
+                        <ul class="social-icons">
+                            <li><a href="#" target="_blank" aria-label="Facebook"><img src="../../images/icon_facebook.svg" alt="Facebook Icon"></a></li>
+                            <li><a href="#" target="_blank" aria-label="Instagram"><img src="../../images/icon_instagram.svg" alt="Instagram Icon"></a></li>
+                            <li><a href="#" target="_blank" aria-label="LinkedIn"><img src="../../images/icon_linkedin.svg" alt="LinkedIn Icon"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact-info">
+                    </div>
+                </div>
+                <p class="copyright">©2025 Power Up ENSA Fes. Tous droits réservés.</p>
+            </div>
+        </footer>
+
+        <script src="../../js/script.js"></script>
+    </body>
+    </html>
