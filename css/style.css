@@ -1,8 +1,19 @@
 /*=====================================================================
   Theme: Power Up - Refined Design
-  Focus: Enhanced Rounded Edges, Optimized Spacing
+  Foc: Enhanced Rounded Edges, Optimized Spacing
   =====================================================================*/
 /* Center the container at the bottom of the screen */
+.news-image {
+    /* Define the size of the box */
+    width: 100%;
+    height: 500; /* You can change this height */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* KEY: Fits image inside without cropping */
+}
 .scroll-indicator {
   position: absolute;
   bottom: 30px; /* Adjust distance from bottom */
