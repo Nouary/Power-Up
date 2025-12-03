@@ -41,6 +41,110 @@
     <main id="main-content">
         <h1>Actualités / Blog</h1>
         <section class="news-list">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <article class="news-article-card" id="cimsi-2025-announce">
+    
+          <!-- Zone Vidéo : Style ajusté pour éviter le rognage -->
+          <div class="news-article-image" style="background:#000; display:block; padding:0; margin-top:0.2rem; margin-bottom:0.2rem; width:100%; height:auto; min-height:unset;">
+              
+              <!-- Vidéo : width 100% et height auto pour respecter le format d'origine -->
+              <video id="cimsi2025-video" src="images/Banner.mp4" 
+                    controls muted playsinline autoplay loop 
+                    style="width:100%; height:auto; max-height: 80vh; display:block; margin:0 auto; object-fit: contain;">
+              </video>
+          </div>
+
+          <!-- Script de gestion (Autoplay & Boucle) -->
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var videoCimsi = document.getElementById('cimsi2025-video');
+
+            if ('IntersectionObserver' in window && videoCimsi) {
+              var observerCimsi = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                  if (entry.isIntersecting) {
+                    videoCimsi.play();
+                  } else {
+                    videoCimsi.pause();
+                  }
+                });
+              }, { threshold: 0.25 }); // Threshold baissé à 0.25 pour déclencher plus facilement sur les grosses vidéos
+              observerCimsi.observe(videoCimsi);
+            }
+            
+            // Sécurité boucle
+            if(videoCimsi) {
+              videoCimsi.addEventListener('ended', function() {
+                videoCimsi.currentTime = 0;
+                videoCimsi.play();
+              });
+            }
+          });
+          </script>
+
+          <div class="news-article-content">
+              <div class="news-article-meta">
+                  <span class="news-date">19-20 Décembre 2025</span>
+                  <span class="news-badge future" style="background-color: #0056b3; color: white;">Événement à venir</span>
+              </div>
+              <div class="news-byline">Par <span class="news-author">Bureau Club Power Up</span> | ENSA Fès</div>
+              
+              <h2 class="news-article-title">Partenariat Officiel : CIMSI 2025 à l'ENSA Fès</h2>
+              
+              <div class="news-article-body">
+                  <p>Le Club Power Up est honoré de figurer parmi les partenaires officiels et membres du comité d'organisation de la <strong>6ème édition de la CIMSI</strong> (Conférence Internationale sur le Monitoring des Systèmes Industriels).</p>
+                  
+                  <p>Cet événement international constitue un carrefour d'excellence pour échanger sur les dernières avancées scientifiques appliquées aux systèmes industriels. Voici les informations essentielles :</p>
+                  
+                  <ul>
+                      <li><strong>Date :</strong> 19 et 20 Décembre 2025.</li>
+                      <li><strong>Lieu :</strong> ENSA Fès.</li>
+                      <li><strong>Thématiques :</strong> Monitoring, diagnostic, maintenance prévisionnelle et intelligence artificielle industrielle.</li>
+                      <li><strong>Organisateurs :</strong> ENSA Fès, Centrale Lille, ENSA Marrakech & Oujda.</li>
+                  </ul>
+
+                  <p>Nous invitons tous les chercheurs, doctorants et industriels à soumettre leurs travaux et à rejoindre cette dynamique d'innovation commune.</p>
+                  
+                  <a href="https://cimsi2025.sciencesconf.org/?lang=fr" target="_blank" class="btn btn-primary" style="margin-top:1rem; background-color: #0056b3; border-color: #0056b3;">Visiter le site officiel CIMSI 2025</a>
+              </div>
+          </div>
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <!-- Article 2bis: Innov'tech 2025 - Retour sur l'événement (le plus récent) -->
             <article class="news-article-card" id="innovtech-2025-retour">
                 <div class="news-article-image" style="background:#181818;display:flex;align-items:center;justify-content:center;padding:0;margin-top:0.2rem;margin-bottom:0.2rem;min-height:unset;height:220px;aspect-ratio:1/1;">
