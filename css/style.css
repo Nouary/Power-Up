@@ -2,8 +2,51 @@
   Theme: Power Up - Refined Design
   Focus: Enhanced Rounded Edges, Optimized Spacing
   =====================================================================*/
+/* Center the container at the bottom of the screen */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px; /* Adjust distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
 
-/* --- Navigation Responsive --- */
+/* Create the arrow shape using borders */
+.arrow {
+  width: 20px;  /* Size of the arrow */
+  height: 20px;
+  border-bottom: 4px solid #118f3b; /* Change color here (e.g., white or black) */
+  border-right: 4px solid #118f3b;  /* Change color here */
+  transform: rotate(45deg);
+  margin: -5px; /* Pulls them closer together */
+  
+  /* The Animation */
+  animation: bounce 2s infinite;
+}
+
+/* Add a slight delay to the second arrow for a "wave" effect */
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+/* Define the Up and Down movement */
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}- Navigation Responsive --- */
+
 .nav-toggle {
   display: none;
   flex-direction: column;
